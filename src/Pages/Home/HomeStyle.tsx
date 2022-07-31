@@ -2,64 +2,59 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex: 1;
+  min-height: 100vh;
+  background: #211d28;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
-export const MainContent = styled.main`
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(purple, transparent);
+export const Tittle = styled.h1`
+  color: white;
+`;
+export const SubTittle = styled.h2`
+  opacity: 0.5;
+  color: white;
 `;
 
-export const DonateForm = styled.form`
-  display: flex;
-  flex-direction: column;
+export const Input = styled.input`
+  border: 2px #575353 solid;
+  background: transparent;
+  border-radius: 5px 5px 0px 0px;
+  min-width: 20rem;
+  height: 2.5rem;
+  color: green;
 
-  section:first-of-type {
-    justify-content: center;
+  :hover {
+    border-color: #bb1fd2;
   }
+`;
+export const InputBottom = styled(Input)`
+  border-radius: 0px 0px 5px 5px;
+`;
 
-  section {
-    display: flex;
-    align-items: flex-end;
-    flex: 1;
-    width: 100%;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: -0.5rem;
-    margin-top: 0.5rem;
-    & > * {
-      margin: 0.5rem;
-      @media screen and (max-width: 360px) {
-        margin-top: 1rem;
-      }
-    }
+export const ContainForgot = styled.div`
+min-width: 5rem;
+height: 3rem;
+display: flex;
+justify-content: flex-end;
+background: transparent;
+border: none;
+`;
 
-    & > button {
-      min-width: 4rem;
-      align-items: center;
-      align-self: stretch;
-      @media screen and (max-width: 360px) {
-        flex: 1;
-      }
-      &[type='submit'] {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        & > svg {
-          fill: #fff;
-        }
-      }
-    }
-  }
+export const TextForgot = styled.h2`
+  color: #bb1fd2;
+  font-size: 1rem;
+
+`;
+
+export const ButtonLogin = styled.button`
+  min-width: 20rem;
+  min-height: 3rem;
+  background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
+  box-shadow: 0px 4px 20px rgba(188, 49, 243, 0.5);
+  border-radius: 8px;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
 `;
